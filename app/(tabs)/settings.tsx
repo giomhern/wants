@@ -1,15 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
 import React from "react";
 
-const Profile = () => {
+const Settings = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
-export default Profile;
+export default Settings;
 
 const styles = StyleSheet.create({
   container: {
