@@ -12,7 +12,6 @@ import { Octicons } from "@expo/vector-icons";
 import ProfileInput from "@/components/ProfileInput";
 
 const Profile = () => {
-  const [username, setUsername] = useState("");
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>

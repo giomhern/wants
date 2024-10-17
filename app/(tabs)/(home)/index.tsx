@@ -11,6 +11,7 @@ import { colors } from "@/consts/theme";
 import { categories } from "@/consts/categories";
 import CategoryCard from "@/components/CategoryCard";
 import { Octicons } from "@expo/vector-icons";
+import { FadeIn } from "react-native-reanimated";
 
 const Home = () => {
   const [selectedId, setSelectedId] = useState(1);
@@ -40,7 +41,7 @@ const Home = () => {
         <View
           style={{
             height: 200,
-            width: "auto",
+            flex: 1,
             backgroundColor: colors.colorGrey,
             borderRadius: 20,
             marginVertical: 16,
@@ -52,7 +53,7 @@ const Home = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: 14 
+            marginBottom: 14,
           }}
         >
           <Text style={styles.sectionHeaderText}>Shopping Summary</Text>
@@ -63,6 +64,43 @@ const Home = () => {
               size={20}
             />
           </Pressable>
+        </View>
+
+        <View style={{ flexDirection: "row", gap: 16 }}>
+          <View
+            style={{
+              flex: 1, 
+              height: 150,
+              backgroundColor: colors.colorGrey,
+              borderRadius: 20,
+            }}
+          ></View>
+          <View
+            style={{
+              flex: 1,
+              height: 150,
+              backgroundColor: colors.colorGrey,
+              borderRadius: 20,
+            }}
+          ></View>
+        </View>
+        <View style={{ flexDirection: "row", gap: 16, marginVertical: 20 }}>
+          <View
+            style={{
+              flex: 1, 
+              height: 150,
+              backgroundColor: colors.colorGrey,
+              borderRadius: 20,
+            }}
+          ></View>
+          <View
+            style={{
+              flex: 1,
+              height: 150,
+              backgroundColor: colors.colorGrey,
+              borderRadius: 20,
+            }}
+          ></View>
         </View>
       </ScrollView>
     </SafeAreaView>

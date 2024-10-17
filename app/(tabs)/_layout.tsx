@@ -18,32 +18,32 @@ export default function RootLayout() {
         options={{
           title: "Home",
           tabBarShowLabel: false,
-          tabBarIcon: ({ size, color, focused }) => (
+          tabBarIcon: ({ size, color }) => (
             <Octicons name="feed-tag" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="saved"
+        name="(saved)"
         options={{
           title: "Saved",
           tabBarShowLabel: false,
-          tabBarIcon: ({ size, color, focused }) => (
+          tabBarIcon: ({ size, color }) => (
             <Octicons name="heart-fill" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="(profile)"
         options={{
           title: "My Profile",
           tabBarShowLabel: false,
-          tabBarIcon: ({ size, color, focused }) => (
+          tabBarIcon: ({ size, color }) => (
             <Octicons name="person-fill" size={size} color={color} />
           ),
           headerShown: true,
           headerRight: () => (
-            <Link href={"/"} asChild>
+            <Link href={"(home)"} asChild>
               <Pressable hitSlop={20} style={{ paddingHorizontal: 20 }}>
                 <Octicons
                   name="pencil"
