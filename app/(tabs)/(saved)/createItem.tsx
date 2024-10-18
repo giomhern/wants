@@ -1,10 +1,10 @@
-import { StyleSheet, Text, SafeAreaView, View, TextInput } from "react-native";
+import { StyleSheet, Text, TextInput, SafeAreaView, View } from "react-native";
 import React, { useState } from "react";
-import { colors } from "@/consts/theme";
 import { Octicons } from "@expo/vector-icons";
+import { colors } from "@/consts/theme";
 
-const Saved = () => {
-  const [searchText, setSearchText] = useState("");
+const CreateWant = () => {
+  const [link, setLink] = useState("");
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
@@ -12,17 +12,21 @@ const Saved = () => {
           <Octicons name="search" size={16} color={colors.colorDarkGrey} />
           <TextInput
             style={{ width: "100%" }}
-            placeholder="What do you want? :)"
-            value={searchText}
-            onChangeText={setSearchText}
+            placeholder="Paste your link :)"
+            value={link}
+            onChangeText={setLink}
           />
         </View>
+        <Text style={styles.disclaimer}>
+          Paste your link and we will handle the rest for you. Errors do happen,
+          but don't worry. You will be able to modify it to your needs.
+        </Text>
       </View>
     </SafeAreaView>
   );
 };
 
-export default Saved;
+export default CreateWant;
 
 const styles = StyleSheet.create({
   container: {
@@ -43,5 +47,10 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: colors.colorGrey,
     borderRadius: 10,
+    marginVertical: 16, 
   },
+  disclaimer: {
+    fontSize: 12, 
+    color: colors.colorDarkGrey, 
+  }
 });

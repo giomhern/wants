@@ -3,7 +3,7 @@ import { Octicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { colors } from "@/consts/theme";
 import { Link } from "expo-router";
-import { Text, Pressable } from "react-native";
+import { Text, Pressable, View } from "react-native";
 
 export default function RootLayout() {
   return (
@@ -11,6 +11,9 @@ export default function RootLayout() {
       screenOptions={{
         tabBarActiveTintColor: colors.colorBlack,
         headerShown: false,
+        tabBarStyle: {
+          borderTopWidth: 0,
+        },
       }}
     >
       <Tabs.Screen
@@ -26,10 +29,23 @@ export default function RootLayout() {
       <Tabs.Screen
         name="(saved)"
         options={{
-          title: "Saved",
           tabBarShowLabel: false,
+          headerTitle: "",
+          headerLeft: () => (
+            <View style={{marginLeft: 16, }}>
+              <Text style={{fontSize: 20, fontWeight: "600"}}>Your Wants</Text>
+            </View>
+          ),
           tabBarIcon: ({ size, color }) => (
             <Octicons name="heart-fill" size={size} color={color} />
+          ),
+          headerShown: true,
+          headerRight: () => (
+            <Link href={"(saved)/createItem"} asChild>
+              <Pressable hitSlop={20} style={{ paddingHorizontal: 20 }}>
+                <Octicons name="plus" size={20} color={colors.colorBlack} />
+              </Pressable>
+            </Link>
           ),
         }}
       />
@@ -45,11 +61,7 @@ export default function RootLayout() {
           headerRight: () => (
             <Link href={"(home)"} asChild>
               <Pressable hitSlop={20} style={{ paddingHorizontal: 20 }}>
-                <Octicons
-                  name="pencil"
-                  size={20}
-                  color={colors.colorBlack}
-                />
+                <Octicons name="pencil" size={20} color={colors.colorBlack} />
               </Pressable>
             </Link>
           ),

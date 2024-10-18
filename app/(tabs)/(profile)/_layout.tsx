@@ -5,7 +5,11 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{ headerShown: false, animation: "fade" }}
+        options={{
+          headerShown: false,
+          animation: "fade",
+          headerShadowVisible: false,
+        }}
       />
     </Stack>
   );
