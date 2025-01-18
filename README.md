@@ -4,7 +4,7 @@ Inspired by my partner who has always said that she wishes for an app where she 
 
 ## Quick Dependency Setup
 
-This is an app built with TypeScript and React Native, so we do need a couple of dependencies to get it up locally. Below you can find the following commands to get started. 
+This is an app built with TypeScript and React Native, so we do need a couple of dependencies to set it up locally. Below you can find the following commands to get started. 
 ```
 npx expo install -- --save-dev prettier eslint-config-prettier
 eslint-plugin-prettier eslint-plugin-react-native
