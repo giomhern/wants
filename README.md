@@ -2,7 +2,7 @@
 
 Inspired by my partner who has always said that she wishes for an app where she can make a wishlist from different sites and send them to her friends, family and of course, me. This concept is a combination between checklist and shareable feeds (still working out the details). Hoping it will help others with the same issue!
 
-## Commands to setup a React Native project
+## Quick Dependency Setup
 
 ```
 npx expo install -- --save-dev prettier eslint-config-prettier
